@@ -1,0 +1,134 @@
+vr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega -I/home/wfaulkner/arduino-1.0/libraries/EEPROM -I/home/wfaulkner/arduino-1.0/libraries/Wire -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Defines -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BatteryMonitor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Gyroscope -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Accelerometer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_APM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_Wii -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_CHR6DM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Kinematics -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Compass -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Receiver -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Motors -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BarometricSensor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_RangeFinder -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_CameraStabilizer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_FlightControlProcessor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_SPI -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_OSD /tmp/build3146171375487516512.tmp/BMP_Test.cpp -o/tmp/build3146171375487516512.tmp/BMP_Test.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega -I/home/wfaulkner/arduino-1.0/libraries/EEPROM -I/home/wfaulkner/arduino-1.0/libraries/Wire -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Defines -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BatteryMonitor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Gyroscope -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Accelerometer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_APM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_Wii -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_CHR6DM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Kinematics -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Compass -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Receiver -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Motors -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BarometricSensor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_RangeFinder -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_CameraStabilizer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_FlightControlProcessor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_SPI -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_OSD -I/home/wfaulkner/arduino-1.0/libraries/EEPROM/utility /home/wfaulkner/arduino-1.0/libraries/EEPROM/EEPROM.cpp -o/tmp/build3146171375487516512.tmp/EEPROM/EEPROM.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega -I/home/wfaulkner/arduino-1.0/libraries/EEPROM -I/home/wfaulkner/arduino-1.0/libraries/Wire -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Defines -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BatteryMonitor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Gyroscope -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Accelerometer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_APM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_Wii -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_CHR6DM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Kinematics -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Compass -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Receiver -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Motors -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BarometricSensor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_RangeFinder -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_CameraStabilizer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_FlightControlProcessor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_SPI -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_OSD -I/home/wfaulkner/arduino-1.0/libraries/Wire/utility /home/wfaulkner/arduino-1.0/libraries/Wire/Wire.cpp -o/tmp/build3146171375487516512.tmp/Wire/Wire.cpp.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega -I/home/wfaulkner/arduino-1.0/libraries/EEPROM -I/home/wfaulkner/arduino-1.0/libraries/Wire -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Defines -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BatteryMonitor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Gyroscope -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Accelerometer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_APM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_Wii -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_CHR6DM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Kinematics -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Compass -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Receiver -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Motors -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BarometricSensor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_RangeFinder -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_CameraStabilizer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_FlightControlProcessor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_SPI -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_OSD -I/home/wfaulkner/arduino-1.0/libraries/Wire/utility /home/wfaulkner/arduino-1.0/libraries/Wire/utility/twi.c -o/tmp/build3146171375487516512.tmp/Wire/utility/twi.c.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega -I/home/wfaulkner/arduino-1.0/libraries/EEPROM -I/home/wfaulkner/arduino-1.0/libraries/Wire -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Defines -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BatteryMonitor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Gyroscope -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Accelerometer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_APM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_Wii -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_CHR6DM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Kinematics -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Compass -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Receiver -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Motors -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BarometricSensor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_RangeFinder -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_CameraStabilizer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_FlightControlProcessor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_SPI -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_OSD -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math/utility /home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math/AQMath.cpp -o/tmp/build3146171375487516512.tmp/AQ_Math/AQMath.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega -I/home/wfaulkner/arduino-1.0/libraries/EEPROM -I/home/wfaulkner/arduino-1.0/libraries/Wire -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Defines -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Math -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BatteryMonitor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Gyroscope -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Accelerometer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_APM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_Wii -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Platform_CHR6DM -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Kinematics -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Compass -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Receiver -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_Motors -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_BarometricSensor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_RangeFinder -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_CameraStabilizer -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_FlightControlProcessor -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_SPI -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_OSD -I/home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C/utility /home/wfaulkner/Dropbox/git/BMP085_Test/libraries/AQ_I2C/Device_I2C.cpp -o/tmp/build3146171375487516512.tmp/AQ_I2C/Device_I2C.cpp.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/wiring_pulse.c -o/tmp/build3146171375487516512.tmp/wiring_pulse.c.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/wiring.c -o/tmp/build3146171375487516512.tmp/wiring.c.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/wiring_digital.c -o/tmp/build3146171375487516512.tmp/wiring_digital.c.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/wiring_analog.c -o/tmp/build3146171375487516512.tmp/wiring_analog.c.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/WInterrupts.c -o/tmp/build3146171375487516512.tmp/WInterrupts.c.o 
+avr-gcc -c -g -Os -Wall -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/wiring_shift.c -o/tmp/build3146171375487516512.tmp/wiring_shift.c.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/Stream.cpp -o/tmp/build3146171375487516512.tmp/Stream.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/CDC.cpp -o/tmp/build3146171375487516512.tmp/CDC.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.cpp -o/tmp/build3146171375487516512.tmp/IPAddress.cpp.o 
+In file included from /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.cpp:3:0:
+/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.h: In member function ‘IPAddress::operator uint32_t()’:
+/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.h:51:55: warning: dereferencing type-punned pointer will break strict-aliasing rules
+/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.h: In member function ‘bool IPAddress::operator==(const IPAddress&)’:
+/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.h:52:75: warning: dereferencing type-punned pointer will break strict-aliasing rules
+/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/IPAddress.h:52:108: warning: dereferencing type-punned pointer will break strict-aliasing rules
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/Print.cpp -o/tmp/build3146171375487516512.tmp/Print.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/HardwareSerial.cpp -o/tmp/build3146171375487516512.tmp/HardwareSerial.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/USBCore.cpp -o/tmp/build3146171375487516512.tmp/USBCore.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/Tone.cpp -o/tmp/build3146171375487516512.tmp/Tone.cpp.o 
+/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/Tone.cpp:93:45: warning: only initialized variables can be placed into program memory area
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/HID.cpp -o/tmp/build3146171375487516512.tmp/HID.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/WString.cpp -o/tmp/build3146171375487516512.tmp/WString.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/new.cpp -o/tmp/build3146171375487516512.tmp/new.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/main.cpp -o/tmp/build3146171375487516512.tmp/main.cpp.o 
+avr-g++ -c -g -Os -Wall -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=100 -I/home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino -I/home/wfaulkner/arduino-1.0/hardware/arduino/variants/mega /home/wfaulkner/arduino-1.0/hardware/arduino/cores/arduino/WMath.cpp -o/tmp/build3146171375487516512.tmp/WMath.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/wiring_pulse.c.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/wiring.c.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/wiring_digital.c.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/wiring_analog.c.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/WInterrupts.c.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/wiring_shift.c.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/Stream.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/CDC.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/IPAddress.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/Print.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/HardwareSerial.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/USBCore.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/Tone.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/HID.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/WString.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/new.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/main.cpp.o 
+avr-ar rcs /tmp/build3146171375487516512.tmp/core.a /tmp/build3146171375487516512.tmp/WMath.cpp.o 
+avr-gcc -Os -Wl,--gc-sections -mmcu=atmega1280 -o /tmp/build3146171375487516512.tmp/BMP_Test.cpp.elf /tmp/build3146171375487516512.tmp/BMP_Test.cpp.o /tmp/build3146171375487516512.tmp/EEPROM/EEPROM.cpp.o /tmp/build3146171375487516512.tmp/Wire/Wire.cpp.o /tmp/build3146171375487516512.tmp/Wire/utility/twi.c.o /tmp/build3146171375487516512.tmp/AQ_Math/AQMath.cpp.o /tmp/build3146171375487516512.tmp/AQ_I2C/Device_I2C.cpp.o /tmp/build3146171375487516512.tmp/core.a -L/tmp/build3146171375487516512.tmp -lm 
+avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 /tmp/build3146171375487516512.tmp/BMP_Test.cpp.elf /tmp/build3146171375487516512.tmp/BMP_Test.cpp.eep 
+avr-objcopy -O ihex -R .eeprom /tmp/build3146171375487516512.tmp/BMP_Test.cpp.elf /tmp/build3146171375487516512.tmp/BMP_Test.cpp.hex 
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+Binary sketch size: 38010 bytes (of a 126976 byte maximum)
