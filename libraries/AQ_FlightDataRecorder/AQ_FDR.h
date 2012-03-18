@@ -85,6 +85,7 @@
 
 struct FDR_Types {
   uint8_t      type;
+                                //TODO:  add descriptive type name string
   uint8_t      descriptor[21];  // null terminated String of decode values, max 20
   uint8_t      labels[100];
 } 
@@ -104,7 +105,7 @@ _descriptors[] = {
 
 #define  OPENFDR_PIN  32
 
-class serialLogger : public Print {
+class serialLogger /*public Print*/ {
   
 private:
   uint8_t                    _port;
@@ -114,27 +115,15 @@ private:
   HardwareSerial             *_serialPort; 
 
 public:
+/*
   using Print::write;  // pull in write(str) and write(buf, size) from Print
+*/
 
 
-  //
-  // Constructor
-  //
-  serialLogger (void) { 
+  void initialize(uint8_t port, long baud) {
 
-    // prime the logging buffer with the start sequence
-    _buffer[0] = FDR_RECORD_SS;
-
-  } //end serialLogger()
-
-
-
-  // 
-  // Note the lack of error checking
-  // 
-  void begin(uint8_t port, long baud) {
-
-    _inCommandMode = OFF;
+        _buffer[0] = FDR_RECORD_SS;  // Load first buffer char w/ start byte
+        _inCommandMode = OFF;
 
     switch (port) {
       
@@ -161,14 +150,16 @@ public:
 
     _serialPort -> begin(baud);
   
-#ifdef  FDR_USE_DTR  
+//#ifdef  FDR_USE_DTR  
     pinMode (FDR_OL_DTR_PIN, OUTPUT);
     digitalWrite (FDR_OL_DTR_PIN, HIGH);
     delay(22);
-#endif
+//#endif
     
 
     exitCommandMode();
+    
+    dumpRecord(FDR_REC_HEADER);
 
 
   } //end begin()
@@ -372,6 +363,7 @@ public:
       *bptr = cksum_b;
       _serialPort -> write(_buffer,((uint16_t) bptr - (uint16_t) &_buffer)+1);
     }
+    Serial.println("Dumped record");
   }
 
 

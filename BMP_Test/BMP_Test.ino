@@ -1026,6 +1026,12 @@
   #endif
 #endif  
 
+//********************************************************
+//****************** FLIGHT DATA RECORDER ****************
+//********************************************************
+#include "AQ_FDR.h"
+serialLogger loggerFDR;
+
 // Include this last as it contains objects from above declarations
 #include "AltitudeControlProcessor.h"
 #include "FlightControlProcessor.h"
@@ -1150,7 +1156,9 @@ void setup() {
      binaryPort = &Serial;
     #endif
   #endif
-
+  // Set up Flight Data Recorder
+  loggerFDR.initialize(1,115200);
+  
   setupFourthOrder();
 
   previousTime = micros();
@@ -1269,6 +1277,7 @@ void loop () {
         measureBaroSum(); 
         if (frameCounter % THROTTLE_ADJUST_TASK_SPEED == 0) {  //  50 Hz tasks
           evaluateBaroAltitude();
+          loggerFDR.dumpRecord(FDR_REC_FLIGHT);
         }
       #endif
       #ifdef AltitudeHoldRangeFinder
