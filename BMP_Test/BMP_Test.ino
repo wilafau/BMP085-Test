@@ -1157,7 +1157,8 @@ void setup() {
     #endif
   #endif
   // Set up Flight Data Recorder
-  loggerFDR.initialize(1,115200);
+  loggerFDR.initialize(2,115200);
+  Serial.println("called loggerFDR.initialize");
   
   setupFourthOrder();
 
@@ -1191,7 +1192,7 @@ void loop () {
   deltaTime = currentTime - previousTime;
 
   measureCriticalSensors();
-
+loggerFDR.interactiveCommandMode();
   // Main scheduler loop set for 100hz
   if (deltaTime >= 10000) {
 
@@ -1201,7 +1202,6 @@ void loop () {
     // 100hz task loop
     // ================================================================
     if (frameCounter % TASK_100HZ == 0) {  //  100 Hz tasks
-  
       G_Dt = (currentTime - hundredHZpreviousTime) / 1000000.0;
       hundredHZpreviousTime = currentTime;
       
@@ -1277,7 +1277,9 @@ void loop () {
         measureBaroSum(); 
         if (frameCounter % THROTTLE_ADJUST_TASK_SPEED == 0) {  //  50 Hz tasks
           evaluateBaroAltitude();
-          loggerFDR.dumpRecord(FDR_REC_FLIGHT);
+          loggerFDR.dumpRecord(FDR_REC_ACCELS);
+           //        loggerFDR.dumpRecord(FDR_REC_TEST);
+
         }
       #endif
       #ifdef AltitudeHoldRangeFinder
@@ -1335,8 +1337,10 @@ void loop () {
       #endif
 
       // Listen for configuration commands and reports telemetry
+      if (!loggerFDR.inCommandMode()){
       readSerialCommand(); // defined in SerialCom.pde
       sendSerialTelemetry(); // defined in SerialCom.pde
+		}
 
       #ifdef OSD_SYSTEM_MENU
         updateOSDMenu();

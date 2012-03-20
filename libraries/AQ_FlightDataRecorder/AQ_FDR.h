@@ -47,9 +47,10 @@
 #define  FDR_OL_PROMPT         '>'					
 #define  FDR_OL_ESCSEQ         "\x1A\x1A\x1A\r"    // 3 ctrl-Z and a CR
 #define  FDR_OL_RESTART        "\rrestart\r"
-#define	 FDR_OL_DTR_PIN		
+#define	 FDR_OL_DTR_PIN		   32
 
 #define  FDR_CMDESC            '~'
+#define  FDR_CMDDTR			   '@'
 #define  FDR_CMDRETRIES        5
 #define  FDR_RECORD_SS         0xA3
 
@@ -63,6 +64,7 @@
 #define  FDR_REC_ALTPID        6
 #define  FDR_REC_BARODATA      7
 #define  FDR_REC_BAROGND       8
+#define  FDR_REC_ACCELS		   9
 
 
 
@@ -91,7 +93,8 @@ struct FDR_Types {
 } 
 _descriptors[] = {
   {FDR_REC_HEADER,  "X",        "X"},                     
-  {FDR_REC_FLIGHT,  "Thhaib", "raw Alt,sm Alt,gndZacc,Thr Adj,Mtr Cmd,AH Flg" }, 
+  {FDR_REC_FLIGHT,  "Thhfiib", "raw Alt,sm Alt,earthZ,Thr Adj,Mtr Cmd,AH Flg" }, 
+  {FDR_REC_ACCELS,  "Tffffff", "earthX,earthY,earthZ,accX,accY,accZ" }, 
   /*
   {FDR_REC_GPS,     "Tgghb",    "lat,long,GPS alt,flag"},
   {FDR_REC_ITOD,    "Tffffa",      "raw Alt, Roll, Pitch, Yaw"},
@@ -103,7 +106,6 @@ _descriptors[] = {
   */
 };
 
-#define  OPENFDR_PIN  32
 
 class serialLogger /*public Print*/ {
   
@@ -136,9 +138,7 @@ public:
 #endif
 
       default: _serialPort = &Serial; break;
-    
-    } 
-
+    }
 
     // OpenLog will open and read the file CONFIG.TXT which should contain:
     // "115200,26,3,0", Baud=115200, Esc char is 26=0x1A, Num esc chars=3, 0 is new file mode
@@ -147,19 +147,14 @@ public:
     // make sure we are starting with a fresh file.  
     //
     // FUTURE: Hook up OpenLog's DTR pin to an Output PIN so this code can reset OpenLog
+	
+	// for some very strange reason OpenLog is not recording data unless we
+	// force an escape followed by a reset of Openlog.  To be investiaged
+
 
     _serialPort -> begin(baud);
-  
-//#ifdef  FDR_USE_DTR  
-    pinMode (FDR_OL_DTR_PIN, OUTPUT);
-    digitalWrite (FDR_OL_DTR_PIN, HIGH);
-    delay(22);
-//#endif
-    
-
     exitCommandMode();
-    
-    dumpRecord(FDR_REC_HEADER);
+
 
 
   } //end begin()
@@ -252,7 +247,9 @@ public:
 #define DUMP(X) vptr=(uint8_t *)&X;for(uint8_t i=0;i<sizeof(X);i++)*bptr++=*vptr++; 
 #define DUMPA(X,Y) vptr=(uint8_t *)X;for(uint8_t i=0;i<Y;i++)*bptr++=*vptr++;  //addr, size 
 
-      //  {FDR_REC_FLIGHT,  "Thhaib", "raw Alt,sm Alt,gndZacc,Throttle,AH Flg" },
+      //  {{FDR_REC_FLIGHT,  "Thhfiib", "raw Alt,sm Alt,earthZ,Thr Adj,Mtr Cmd,AH Flg" }, 
+      
+      
       case (FDR_REC_FLIGHT):
         DUMP(type);                             // Type
         DUMPA(&currentTime,3);             		//T TimeStamp
@@ -260,14 +257,32 @@ public:
         DUMP(i_val); //h
         i_val=baroAltitude*100;					// Smoothed Alt
         DUMP(i_val); //h
-        i_val = (earthAccel[ZAXIS] * 1000);		// Earth Z Axis Accel
-        DUMP(i_val); //a
+
+        DUMP(earthAccel[ZAXIS]);
+
 
         DUMP(throttle);               			// Throttal value
         DUMP(motorCommand[0]);                          //i Motor cmd - assuming stable level hover so only dump one
         DUMP(altitudeHoldState);
 
       break;  // end case 1
+      
+      case (FDR_REC_ACCELS):
+        DUMP(type);                             // Type
+        DUMPA(&currentTime,3);             		//T TimeStamp
+        DUMP(earthAccel[XAXIS]);
+		DUMP(earthAccel[YAXIS]);
+        DUMP(earthAccel[ZAXIS]);
+        DUMP(meterPerSecSec[XAXIS]);
+        DUMP(meterPerSecSec[YAXIS]);
+        DUMP(meterPerSecSec[ZAXIS]);
+
+      break;  // end case 9
+/*      
+      case (FDR_REC_TEST): 
+		vptr=(uint8_t *)&"ABCDEF Testing all data";for(uint8_t i=0;i<strlen("ABCDEF Testing all data");i++)*bptr++=*vptr++;
+		break;
+*/
 /*
       case (FDR_REC_GPS): 
       {
@@ -363,7 +378,6 @@ public:
       *bptr = cksum_b;
       _serialPort -> write(_buffer,((uint16_t) bptr - (uint16_t) &_buffer)+1);
     }
-    Serial.println("Dumped record");
   }
 
 
@@ -397,7 +411,7 @@ public:
 
     for (i=1; i<=numTries; i++) {
       
-      _serialPort -> flush();
+      //_serialPort -> flush();
       _serialPort -> write(FDR_OL_ESCSEQ);
       //_serialPort -> write("\r"); // in case we were already in cmd mode
       
@@ -425,16 +439,15 @@ public:
   // 
   void exitCommandMode () {
     
-    digitalWrite (OPENFDR_PIN, LOW);
+    digitalWrite (FDR_OL_DTR_PIN, LOW);
     delay(1);
-    digitalWrite (OPENFDR_PIN, HIGH);
-    delay(2200);
+    digitalWrite (FDR_OL_DTR_PIN, HIGH);
+    delay(20);
     
     //_serialPort -> write("\rrestart\r");      // tell OpenLog to restart logging
     //delay(200);                                    // give OpenLog time to reset.
     _inCommandMode = OFF;
-    dumpRecord(FDR_REC_HEADER);                    // dump decoding header record into log
-    delay(10);                                    // give header time to flush before returning                            
+    dumpRecord(FDR_REC_HEADER);                    // dump decoding header record into log                           
 
     
   } // end exitCommandMode()
@@ -448,9 +461,11 @@ public:
   //
   void interactiveCommandMode () {
     uint8_t        c;
+
     
     if (_inCommandMode == OFF) return;
-
+    
+while (_inCommandMode == ON) {
     // Read user, write to logger
     while (Serial.available()) {
       c=Serial.read();
@@ -467,8 +482,14 @@ public:
       c=_serialPort -> read(); 
       Serial.write(c);
     }
+}
 
   } // end interactiveCommandMode()
+
+uint8_t inCommandMode() {
+	return (_inCommandMode);
+}
+
 
 };
 

@@ -262,6 +262,16 @@ void readSerialCommand() {
       else
         fastTransfer = OFF;
       break;
+    case '>':
+        loggerFDR.enterInteractiveMode();
+        break;
+        /*
+    case '<':
+		Serial.print ("delay 3s");
+        delay(3000);
+        Serial.println ("!");
+        break;
+        */
     }
   }
 }
